@@ -1,8 +1,8 @@
-name: Automated Commit
+name: Automated-Commit
 
 on:
   push:
-    branches: [master] # Ensures the workflow triggers on pushes to master
+    branches: [mian] # Ensures the workflow triggers on pushes to master
 
   schedule:
     - cron: '0 */12 * * *' # Executes every 12 hours
@@ -33,8 +33,8 @@ jobs:
 
       - name: Setup Git Configuration
         run: |
-          git config user.email "incrisz4luv@gmail.com"
-          git config user.name "incrisz"
+          git config user.email "jude05m@outlook.com"
+          git config user.name "J-Code-Dev"
 
       - name: Prepare Commit
         run: |
@@ -48,4 +48,4 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0
         with:
           directory: '.'
-          github_token: ${{ secrets.INCRISZ_TOKEN }}
+          github_token: ${{ secrets.J_Code_Dev }}
